@@ -1,0 +1,94 @@
+{
+  "unpublishedPage": {
+    "name": "Tracking By Metric Copy",
+    "slug": "tracking-by-metric-copy",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1883,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 1290,
+          "containerStyle": "none",
+          "snapRows": 125,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 1260,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Tracking By Metric Copy_GetActions",
+              "name": "GetActions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Tracking By Metric Copy_GetMetrics",
+              "name": "GetMetrics",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Tracking By Metric Copy_run",
+              "name": "run",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Tracking By Metric Copy_run_by_metric",
+              "name": "run_by_metric",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "Select1.selectedOptionValue",
+                "SelectMachineFilter.selectedOptionValue ? \"AND machine = '\" + SelectMachineFilter.selectedOptionValue + \"'\": \"\"",
+                "MultiSelect2.selectedOptionValues.reduce((result, item, index) => {\n\t\treturn result + \"'\" + item + \"'\" + (index != MultiSelect2.selectedOptionValues.length - 1 ? \",\" : \"\")\n\t}, \"\")"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Tracking By Metric Copy_run_meta",
+              "name": "run_meta",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "appsmith.store.metricDetail"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Tracking By Metric Copy",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_626b99c7cca31f35e65b6f15"
+}

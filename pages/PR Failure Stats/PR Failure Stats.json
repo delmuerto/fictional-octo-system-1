@@ -1,0 +1,57 @@
+{
+  "unpublishedPage": {
+    "name": "PR Failure Stats",
+    "slug": "pr-failure-stats",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 570,
+          "containerStyle": "none",
+          "snapRows": 117,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 1180,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "PR Failure Stats_getFailureStats",
+              "name": "getFailureStats",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "StartDate.formattedDate",
+                "EndDate.formattedDate"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "PR Failure Stats",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "63465d4289020c7ac296d080_637eed694a42f47b0d2c50c8"
+}

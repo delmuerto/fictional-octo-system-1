@@ -1,0 +1,87 @@
+{
+  "unpublishedPage": {
+    "name": "Your PR vs Rest",
+    "slug": "your-pr-vs-rest",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 5180,
+          "containerStyle": "none",
+          "snapRows": 93,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 940,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Your PR vs Rest_Utils.init",
+              "name": "Utils.init",
+              "collectionId": "Your PR vs Rest_Utils",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async config => {\n  if (!config?.ignoreRepos) await getAllReposRM.run();\n  if (!config?.ignoreRepos) await getMetricsRM.run();\n  if (!config?.ignoreRepos) await getActions.run();\n  await getLastReleaseRuns.run();\n  await fetchLast100PRruns.run();\n  if (appsmith.URL.queryParams.pr) {\n    await getPRRecentRunData.run();\n  }\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Your PR vs Rest_getAllReposRM",
+              "name": "getAllReposRM",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 100100
+            },
+            {
+              "id": "Your PR vs Rest_getMetricsRM",
+              "name": "getMetricsRM",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Your PR vs Rest_fetchLast100PRruns",
+              "name": "fetchLast100PRruns",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "prSelect.filterText ?? ''",
+                "RepoSelect.selectedOptionValue",
+                "(appsmith.URL.queryParams.pr) ? `\nUNION\n(SELECT\nMax(id) as id,\npull_request_id as value,\nCONCAT(pull_request_id,'-',SUBSTRING(Max(pr_title),1,64), CONCAT(' (',(array_agg(author))[1],')', (CASE WHEN bool_or(is_merge_commit)=true THEN ' ⭐' ELSE '' END))) as label, repo\nfrom run_meta WHERE\npull_request_id::text = '${appsmith.URL.queryParams.pr}'\nAND is_active\n${appsmith.URL.queryParams.runId ? ` AND gh_run_id = ${appsmith.URL.queryParams.runId.split('_')[0]} AND gh_run_attempt = ${appsmith.URL.queryParams.runId.split('_')[1]}` : ''}\nGROUP BY pull_request_id, repo\n\nORDER BY id DESC  limit 100)` : ''"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Your PR vs Rest",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": false
+  },
+  "deleted": false,
+  "gitSyncId": "633baef3cc554c49c42c8021_6343d67205671e46ee8fafc1"
+}

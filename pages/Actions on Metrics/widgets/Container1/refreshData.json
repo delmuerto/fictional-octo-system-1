@@ -1,0 +1,38 @@
+{
+    "boxShadow": "none",
+    "widgetName": "refreshData",
+    "onClick": "{{(function () {\n\tgetPerfActions.run()\n run.run(() => showAlert('Data Refreshed'), () => {})\n})()}}",
+    "buttonColor": "{{appsmith.theme.colors.primaryColor}}",
+    "dynamicPropertyPathList": [
+        {"key": "onClick"},
+        {"key": "borderRadius"}
+    ],
+    "displayName": "Icon Button",
+    "iconSVG": "/static/media/icon.1a0c634a.svg",
+    "topRow": 1,
+    "bottomRow": 5,
+    "parentRowSpace": 10,
+    "type": "ICON_BUTTON_WIDGET",
+    "hideCard": false,
+    "animateLoading": true,
+    "parentColumnSpace": 15.171875,
+    "dynamicTriggerPathList": [{"key": "onClick"}],
+    "leftColumn": 60,
+    "dynamicBindingPathList": [
+        {"key": "buttonColor"},
+        {"key": "borderRadius"}
+    ],
+    "isDisabled": false,
+    "key": "cnogh2dn9u",
+    "labelTextSize": "0.875rem",
+    "rightColumn": 64,
+    "iconName": "refresh",
+    "widgetId": "pkg29vgz4d",
+    "isVisible": true,
+    "version": 1,
+    "parentId": "zqdxb98xdp",
+    "renderMode": "CANVAS",
+    "isLoading": false,
+    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+    "buttonVariant": "SECONDARY"
+}

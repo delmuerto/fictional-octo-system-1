@@ -1,0 +1,129 @@
+{
+  "unpublishedPage": {
+    "name": "Mean of Repos",
+    "slug": "mean-of-repos",
+    "layouts": [
+      {
+        "viewMode": false,
+        "dsl": {
+          "widgetName": "MainContainer",
+          "backgroundColor": "none",
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "detachFromLayout": true,
+          "widgetId": "0",
+          "topRow": 0,
+          "bottomRow": 760,
+          "containerStyle": "none",
+          "snapRows": 70,
+          "parentRowSpace": 1,
+          "type": "CANVAS_WIDGET",
+          "canExtend": true,
+          "version": 89,
+          "minHeight": 710,
+          "parentColumnSpace": 1,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0
+        },
+        "layoutOnLoadActions": [
+          [
+            {
+              "id": "Mean of Repos_ChartData.metricsToDisplay",
+              "name": "ChartData.metricsToDisplay",
+              "collectionId": "Mean of Repos_ChartData",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  const allMetrics = await fetchAllMetrics.run();\n  return allMetrics.map(each => {\n    return {\n      label: each.name,\n      value: each.name\n    };\n  });\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Mean of Repos_fetchAllActions",
+              "name": "fetchAllActions",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Mean of Repos_fetchAllBranchesOfRepo",
+              "name": "fetchAllBranchesOfRepo",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.repo"
+              ],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Mean of Repos_fetchAllMetrics",
+              "name": "fetchAllMetrics",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Mean of Repos_fetchAllRepos",
+              "name": "fetchAllRepos",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [],
+              "timeoutInMillisecond": 10000
+            },
+            {
+              "id": "Mean of Repos_fetchAllRunMetaOfRepoBranch",
+              "name": "fetchAllRunMetaOfRepoBranch",
+              "confirmBeforeExecute": false,
+              "pluginType": "DB",
+              "jsonPathKeys": [
+                "this.params.repo",
+                "this.params.branch"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Mean of Repos_ChartData.formMeanGraph",
+              "name": "ChartData.formMeanGraph",
+              "collectionId": "Mean of Repos_ChartData",
+              "clientSideExecution": true,
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "async () => {\n  const repo = Tabs1.selectedTab;\n  const branch = 'release';\n  const metric = SelectMetricsAppsmith.selectedOptionValue || 'scripting';\n  const allRunMeta = await fetchAllRunMetaOfRepoBranch.run({\n    repo,\n    branch\n  });\n  const allCommits = allRunMeta.map(each => each.commit_id);\n  const medianEntries = await fetchMedianEntriesOfCommits.run({\n    allCommits: `('${allCommits.join(`','`)}')`,\n    metric\n  });\n  const allActions = await fetchAllActions.run();\n  console.log(`('${allCommits.join(`','`)}')`);\n  const finalChartData = allActions.reduce((returnObj, eachAction) => {\n    const actionMedianEntries = medianEntries.filter(each => each.action === eachAction.name);\n    const entries = actionMedianEntries.map(each => ({\n      x: each.commit_id.slice(0, 7),\n      y: each.mean\n    }));\n    console.log({\n      entries,\n      eachAction\n    });\n    returnObj[eachAction.name] = entries;\n    return returnObj;\n  }, {});\n  console.log(finalChartData);\n  storeValue(\"chart_data\", finalChartData);\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ],
+          [
+            {
+              "id": "Mean of Repos_ChartData.actionsToDisplay",
+              "name": "ChartData.actionsToDisplay",
+              "collectionId": "Mean of Repos_ChartData",
+              "confirmBeforeExecute": false,
+              "pluginType": "JS",
+              "jsonPathKeys": [
+                "() => {\n  const allMetrics = fetchAllActions.data;\n  return allMetrics.map(each => {\n    return {\n      label: each.name,\n      value: each.name\n    };\n  });\n}"
+              ],
+              "timeoutInMillisecond": 10000
+            }
+          ]
+        ],
+        "layoutOnLoadActionErrors": [],
+        "validOnPageLoadActions": true,
+        "id": "Mean of Repos",
+        "deleted": false,
+        "policies": [],
+        "userPermissions": []
+      }
+    ],
+    "userPermissions": [],
+    "policies": [],
+    "isHidden": true
+  },
+  "deleted": false,
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_631ec04b767411587354ce50"
+}

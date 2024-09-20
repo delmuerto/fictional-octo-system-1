@@ -1,0 +1,65 @@
+{
+  "pages": [
+    {
+      "id": "PR Details",
+      "isDefault": true
+    },
+    {
+      "id": "Your PR vs Rest",
+      "isDefault": false
+    },
+    {
+      "id": "Release vs Master",
+      "isDefault": false
+    },
+    {
+      "id": "Tracking By Metric",
+      "isDefault": false
+    },
+    {
+      "id": "Actions on Metrics",
+      "isDefault": false
+    },
+    {
+      "id": "PR Run Aggregator",
+      "isDefault": false
+    },
+    {
+      "id": "Tracking By Metric Copy",
+      "isDefault": false
+    },
+    {
+      "id": "Mean of Repos",
+      "isDefault": false
+    },
+    {
+      "id": "Last 100 PR performance Runs ",
+      "isDefault": false
+    },
+    {
+      "id": "PR Failure Stats",
+      "isDefault": false
+    }
+  ],
+  "viewMode": false,
+  "appIsExample": false,
+  "unreadCommentThreads": 0,
+  "color": "#F1DEFF",
+  "icon": "bar-graph",
+  "unpublishedAppLayout": {
+    "type": "FLUID"
+  },
+  "publishedAppLayout": {
+    "type": "FLUID"
+  },
+  "unpublishedCustomJSLibs": [
+    {
+      "uidString": "xmlParser_https://cdnjs.cloudflare.com/ajax/libs/fast-xml-parser/3.17.5/parser.min.js"
+    }
+  ],
+  "publishedCustomJSLibs": [],
+  "evaluationVersion": 2,
+  "applicationVersion": 2,
+  "isManualUpdate": false,
+  "deleted": false
+}
