@@ -1,41 +1,55 @@
 {
-    "boxShadow": "none",
-    "widgetName": "MergeCommitSwitch",
-    "dynamicPropertyPathList": [
-        {"key": "onChange"},
-        {"key": "isDisabled"}
-    ],
-    "displayName": "Switch",
-    "iconSVG": "/static/media/icon.a3115bc1c224776de2846985c8819f99.svg",
-    "searchTags": ["boolean"],
-    "topRow": 15,
-    "bottomRow": 19,
-    "parentRowSpace": 10,
-    "type": "SWITCH_WIDGET",
-    "alignWidget": "LEFT",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 19.123046875,
-    "dynamicTriggerPathList": [{"key": "onChange"}],
-    "leftColumn": 44,
-    "dynamicBindingPathList": [{"key": "accentColor"}],
-    "labelPosition": "Left",
-    "isDisabled": "",
-    "key": "h35ci615hp",
-    "labelTextSize": "1.25rem",
-    "isDeprecated": false,
-    "rightColumn": 63,
-    "onChange": "{{getLastReleaseRuns.run()}}",
-    "dynamicHeight": "FIXED",
-    "widgetId": "adi71gr405",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "isVisible": true,
-    "label": "Show Merge Commits Only",
-    "defaultSwitchState": false,
-    "version": 1,
-    "parentId": "tdayhfmn81",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "maxDynamicHeight": 9000,
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "alignWidget": "LEFT",
+  "animateLoading": true,
+  "bottomRow": 19,
+  "boxShadow": "none",
+  "defaultSwitchState": false,
+  "displayName": "Switch",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "onChange"
+    },
+    {
+      "key": "isDisabled"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.a3115bc1c224776de2846985c8819f99.svg",
+  "isDeprecated": false,
+  "isDisabled": "",
+  "isLoading": false,
+  "isVisible": true,
+  "key": "h35ci615hp",
+  "label": "Show Merge Commits Only",
+  "labelPosition": "Left",
+  "labelTextSize": "1.25rem",
+  "leftColumn": 44,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onChange": "{{getLastReleaseRuns.run()}}",
+  "parentColumnSpace": 19.123046875,
+  "parentId": "tdayhfmn81",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 63,
+  "searchTags": [
+    "boolean"
+  ],
+  "topRow": 15,
+  "type": "SWITCH_WIDGET",
+  "version": 1,
+  "widgetId": "adi71gr405",
+  "widgetName": "MergeCommitSwitch"
 }

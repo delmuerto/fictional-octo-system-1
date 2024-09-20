@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_6256c5580d3d384069c073c3",
+  "id": "PR Run Aggregator_JSObject1",
   "unpublishedCollection": {
     "name": "JSObject1",
     "pageId": "PR Run Aggregator",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "myVar1",
@@ -15,10 +15,6 @@
         "name": "myVar2",
         "value": {}
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "PR Run Aggregator_JSObject1",
-  "deleted": false,
-  "gitSyncId": "622f1c59f1c0af1ceded29e3_6256c5580d3d384069c073c3"
+    ]
+  }
 }

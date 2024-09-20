@@ -1,89 +1,32 @@
 {
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_631f0bc7e3477d2215f3fc20",
   "unpublishedPage": {
-    "name": "Last 100 PR performance Runs ",
-    "slug": "last-100-pr-performance-runs",
+    "isHidden": true,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1224,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 1090,
-          "containerStyle": "none",
-          "snapRows": 70,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 710,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Last 100 PR performance Runs _getAllRepos",
-              "name": "getAllRepos",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 100100
-            }
-          ],
-          [
-            {
-              "id": "Last 100 PR performance Runs _getMetrics",
-              "name": "getMetrics",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Last 100 PR performance Runs _PR_Run_meta.onInit",
-              "name": "PR_Run_meta.onInit",
-              "collectionId": "Last 100 PR performance Runs _PR_Run_meta",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  Object.keys(appsmith.store).forEach(each => {\n    storeValue(each, undefined);\n  });\n  await PR_Run_meta.getPRLatestRun();\n  await PR_Run_meta.last100PRruns();\n  PR_Run_meta.setSelectedTab();\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Last 100 PR performance Runs _fetchRepoMean",
-              "name": "fetchRepoMean",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "RepoSelect.selectedOptionValue"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "Last 100 PR performance Runs ",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 70,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": true
-  },
-  "deleted": false,
-  "gitSyncId": "622f1c59f1c0af1ceded29e3_631f0bc7e3477d2215f3fc20"
+    "name": "Last 100 PR performance Runs ",
+    "slug": "last-100-pr-performance-runs"
+  }
 }

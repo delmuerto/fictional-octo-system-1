@@ -1,11 +1,11 @@
 {
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_6329db5fba642f555713e7d6",
+  "id": "PR Details_Utils",
   "unpublishedCollection": {
     "name": "Utils",
     "pageId": "PR Details",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
     "variables": [
       {
         "name": "defaultMetrics",
@@ -35,10 +35,6 @@
         "name": "incorrectRunValueMessage",
         "value": "\"Not a valid number\""
       }
-    ],
-    "userPermissions": []
-  },
-  "id": "PR Details_Utils",
-  "deleted": false,
-  "gitSyncId": "622f1c59f1c0af1ceded29e3_6329db5fba642f555713e7d6"
+    ]
+  }
 }

@@ -1,65 +1,32 @@
 {
+  "gitSyncId": "63465d4289020c7ac296d080_63608c63eb761c796cb91ccc",
   "unpublishedPage": {
-    "name": "Release vs Master",
-    "slug": "release-vs-master",
+    "isHidden": false,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1224,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 1680,
-          "containerStyle": "none",
-          "snapRows": 109,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 1100,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Release vs Master_TableUtils.init",
-              "name": "TableUtils.init",
-              "collectionId": "Release vs Master_TableUtils",
-              "confirmBeforeExecute": false,
-              "pluginType": "JS",
-              "jsonPathKeys": [
-                "async () => {\n  await Promise.all([getCurrentRelease.run(), getPreviousRelease.run()]).then(data => {\n    if (!data[0] || !data[1]) return undefined;\n    return storeValue(TableUtils.dataKey, {\n      currentRelease: data[0],\n      previousRelease: data[1]\n    });\n  });\n}"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Release vs Master_getLatestReleaseComparisons",
-              "name": "getLatestReleaseComparisons",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "Release vs Master",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1224,
+          "snapColumns": 64,
+          "snapRows": 109,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": false
-  },
-  "deleted": false,
-  "gitSyncId": "63465d4289020c7ac296d080_63608c63eb761c796cb91ccc"
+    "name": "Release vs Master",
+    "slug": "release-vs-master"
+  }
 }

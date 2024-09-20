@@ -1,45 +1,57 @@
 {
-    "boxShadow": "none",
-    "widgetName": "Select1",
-    "isFilterable": false,
-    "dynamicPropertyPathList": [{"key": "sourceData"}],
-    "displayName": "Select",
-    "iconSVG": "/static/media/icon.bd99caba.svg",
-    "labelText": "Metric",
-    "topRow": 0,
-    "bottomRow": 6,
-    "parentRowSpace": 10,
-    "type": "SELECT_WIDGET",
-    "serverSideFiltering": false,
-    "hideCard": false,
-    "defaultOptionValue": "scripting",
-    "animateLoading": true,
-    "parentColumnSpace": 21.92578125,
-    "dynamicTriggerPathList": [{"key": "onOptionChange"}],
-    "leftColumn": 0,
-    "dynamicBindingPathList": [
-        {"key": "options"},
-        {"key": "accentColor"}
-    ],
-    "placeholderText": "Select a metric",
-    "isDisabled": false,
-    "sourceData": "{{GetMetrics.data.map((v) => { return {label: v.name, value: v.name}})}}",
-    "key": "5t5b5zcvye",
-    "labelTextSize": "0.875rem",
-    "isRequired": false,
-    "rightColumn": 18,
-    "dynamicHeight": "FIXED",
-    "widgetId": "gf9m6fek9m",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "optionValue": "value",
-    "isVisible": true,
-    "version": 1,
-    "parentId": "skzyybbydx",
-    "renderMode": "CANVAS",
-    "isLoading": false,
-    "optionLabel": "label",
-    "borderRadius": "0px",
-    "maxDynamicHeight": 9000,
-    "onOptionChange": "{{run_by_metric.run()}}",
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "0px",
+  "bottomRow": 6,
+  "boxShadow": "none",
+  "defaultOptionValue": "scripting",
+  "displayName": "Select",
+  "dynamicBindingPathList": [
+    {
+      "key": "options"
+    },
+    {
+      "key": "accentColor"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "sourceData"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onOptionChange"
+    }
+  ],
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.bd99caba.svg",
+  "isDisabled": false,
+  "isFilterable": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "5t5b5zcvye",
+  "labelText": "Metric",
+  "labelTextSize": "0.875rem",
+  "leftColumn": 0,
+  "maxDynamicHeight": 9000,
+  "minDynamicHeight": 4,
+  "onOptionChange": "{{run_by_metric.run()}}",
+  "optionLabel": "label",
+  "optionValue": "value",
+  "parentColumnSpace": 21.92578125,
+  "parentId": "skzyybbydx",
+  "parentRowSpace": 10,
+  "placeholderText": "Select a metric",
+  "renderMode": "CANVAS",
+  "rightColumn": 18,
+  "serverSideFiltering": false,
+  "sourceData": "{{GetMetrics.data.map((v) => { return {label: v.name, value: v.name}})}}",
+  "topRow": 0,
+  "type": "SELECT_WIDGET",
+  "version": 1,
+  "widgetId": "gf9m6fek9m",
+  "widgetName": "Select1"
 }

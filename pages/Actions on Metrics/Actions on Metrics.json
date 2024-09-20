@@ -1,85 +1,32 @@
 {
+  "gitSyncId": "622f1c59f1c0af1ceded29e3_6242f926c99df2369931be58",
   "unpublishedPage": {
-    "name": "Actions on Metrics",
-    "slug": "actions-on-metrics",
+    "isHidden": false,
     "layouts": [
       {
-        "viewMode": false,
         "dsl": {
-          "widgetName": "MainContainer",
           "backgroundColor": "none",
-          "rightColumn": 1883,
-          "snapColumns": 64,
-          "detachFromLayout": true,
-          "widgetId": "0",
-          "topRow": 0,
           "bottomRow": 3880,
-          "containerStyle": "none",
-          "snapRows": 86,
-          "parentRowSpace": 1,
-          "type": "CANVAS_WIDGET",
           "canExtend": true,
-          "version": 89,
+          "containerStyle": "none",
+          "detachFromLayout": true,
+          "dynamicBindingPathList": [],
+          "leftColumn": 0,
           "minHeight": 870,
           "parentColumnSpace": 1,
-          "dynamicBindingPathList": [],
-          "leftColumn": 0
-        },
-        "layoutOnLoadActions": [
-          [
-            {
-              "id": "Actions on Metrics_GetActions1",
-              "name": "GetActions1",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Actions on Metrics_getPerfActions",
-              "name": "getPerfActions",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [],
-              "timeoutInMillisecond": 10000
-            }
-          ],
-          [
-            {
-              "id": "Actions on Metrics_run",
-              "name": "run",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "SelectMachineFilter.selectedOptionValue ? \"AND machine = '\" + SelectMachineFilter.selectedOptionValue + \"'\": \"\"",
-                "MultiSelect1.selectedOptionValues.reduce((result, item, index) => {\n\t\treturn result + \"'\" + item + \"'\" + (index != MultiSelect1.selectedOptionValues.length - 1 ? \",\" : \"\")\n\t}, \"\")"
-              ],
-              "timeoutInMillisecond": 10000
-            },
-            {
-              "id": "Actions on Metrics_run_meta",
-              "name": "run_meta",
-              "confirmBeforeExecute": false,
-              "pluginType": "DB",
-              "jsonPathKeys": [
-                "appsmith.store.metricDetail"
-              ],
-              "timeoutInMillisecond": 10000
-            }
-          ]
-        ],
-        "layoutOnLoadActionErrors": [],
-        "validOnPageLoadActions": true,
-        "id": "Actions on Metrics",
-        "deleted": false,
-        "policies": [],
-        "userPermissions": []
+          "parentRowSpace": 1,
+          "rightColumn": 1883,
+          "snapColumns": 64,
+          "snapRows": 86,
+          "topRow": 0,
+          "type": "CANVAS_WIDGET",
+          "version": 90,
+          "widgetId": "0",
+          "widgetName": "MainContainer"
+        }
       }
     ],
-    "userPermissions": [],
-    "policies": [],
-    "isHidden": false
-  },
-  "deleted": false,
-  "gitSyncId": "622f1c59f1c0af1ceded29e3_6242f926c99df2369931be58"
+    "name": "Actions on Metrics",
+    "slug": "actions-on-metrics"
+  }
 }

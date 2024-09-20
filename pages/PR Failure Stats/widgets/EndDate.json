@@ -1,57 +1,73 @@
 {
-    "boxShadow": "none",
-    "widgetName": "EndDate",
-    "minDate": "1920-12-31T18:30:00.000Z",
-    "dateFormat": "YYYY-MM-DD HH:mm",
-    "dynamicPropertyPathList": [
-        {"key": "defaultDate"},
-        {"key": "onDateSelected"}
-    ],
-    "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
-    "displayName": "DatePicker",
-    "topRow": 14,
-    "searchTags": ["calendar"],
-    "bottomRow": 18,
-    "shortcuts": false,
-    "parentRowSpace": 10,
-    "labelWidth": "3",
-    "type": "DATE_PICKER_WIDGET2",
-    "hideCard": false,
-    "animateLoading": true,
-    "parentColumnSpace": 20.0625,
-    "dynamicTriggerPathList": [{"key": "onDateSelected"}],
-    "leftColumn": 34,
-    "dynamicBindingPathList": [
-        {"key": "accentColor"},
-        {"key": "borderRadius"},
-        {"key": "defaultDate"}
-    ],
-    "labelPosition": "Left",
-    "labelStyle": "BOLD",
-    "isDisabled": false,
-    "onDateSelected": "{{getFailureStats.run()}}",
-    "key": "93bn6ple9h",
-    "labelTextSize": "1.25rem",
-    "isRequired": false,
-    "defaultDate": "{{moment().format()}}",
-    "isDeprecated": false,
-    "rightColumn": 57,
-    "dynamicHeight": "FIXED",
-    "accentColor": "{{appsmith.theme.colors.primaryColor}}",
-    "widgetId": "ngnfqxusxo",
-    "isVisible": true,
-    "datePickerType": "DATE_PICKER",
-    "label": "End",
-    "version": 2,
-    "parentId": "0",
-    "isLoading": false,
-    "labelAlignment": "left",
-    "renderMode": "CANVAS",
-    "timePrecision": "minute",
-    "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
-    "maxDynamicHeight": 9000,
-    "firstDayOfWeek": 0,
-    "closeOnSelection": true,
-    "maxDate": "2121-12-31T18:29:00.000Z",
-    "minDynamicHeight": 4
+  "accentColor": "{{appsmith.theme.colors.primaryColor}}",
+  "animateLoading": true,
+  "borderRadius": "{{appsmith.theme.borderRadius.appBorderRadius}}",
+  "bottomRow": 18,
+  "boxShadow": "none",
+  "closeOnSelection": true,
+  "dateFormat": "YYYY-MM-DD HH:mm",
+  "datePickerType": "DATE_PICKER",
+  "defaultDate": "{{moment().format()}}",
+  "displayName": "DatePicker",
+  "dynamicBindingPathList": [
+    {
+      "key": "accentColor"
+    },
+    {
+      "key": "borderRadius"
+    },
+    {
+      "key": "defaultDate"
+    }
+  ],
+  "dynamicHeight": "FIXED",
+  "dynamicPropertyPathList": [
+    {
+      "key": "defaultDate"
+    },
+    {
+      "key": "onDateSelected"
+    }
+  ],
+  "dynamicTriggerPathList": [
+    {
+      "key": "onDateSelected"
+    }
+  ],
+  "firstDayOfWeek": 0,
+  "hideCard": false,
+  "iconSVG": "/static/media/icon.300e5ab8e2e1c26c7a0bad06116842b7.svg",
+  "isDeprecated": false,
+  "isDisabled": false,
+  "isLoading": false,
+  "isRequired": false,
+  "isVisible": true,
+  "key": "93bn6ple9h",
+  "label": "End",
+  "labelAlignment": "left",
+  "labelPosition": "Left",
+  "labelStyle": "BOLD",
+  "labelTextSize": "1.25rem",
+  "labelWidth": "3",
+  "leftColumn": 34,
+  "maxDate": "2121-12-31T18:29:00.000Z",
+  "maxDynamicHeight": 9000,
+  "minDate": "1920-12-31T18:30:00.000Z",
+  "minDynamicHeight": 4,
+  "onDateSelected": "{{getFailureStats.run()}}",
+  "parentColumnSpace": 20.0625,
+  "parentId": "0",
+  "parentRowSpace": 10,
+  "renderMode": "CANVAS",
+  "rightColumn": 57,
+  "searchTags": [
+    "calendar"
+  ],
+  "shortcuts": false,
+  "timePrecision": "minute",
+  "topRow": 14,
+  "type": "DATE_PICKER_WIDGET2",
+  "version": 2,
+  "widgetId": "ngnfqxusxo",
+  "widgetName": "EndDate"
 }

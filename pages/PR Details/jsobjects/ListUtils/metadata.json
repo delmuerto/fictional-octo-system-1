@@ -1,15 +1,11 @@
 {
+  "gitSyncId": "638dd7c62913ba43778b9145_638e19ca2913ba43778b9a46",
+  "id": "PR Details_ListUtils",
   "unpublishedCollection": {
     "name": "ListUtils",
     "pageId": "PR Details",
     "pluginId": "js-plugin",
     "pluginType": "JS",
-    "actions": [],
-    "archivedActions": [],
-    "variables": [],
-    "userPermissions": []
-  },
-  "id": "PR Details_ListUtils",
-  "deleted": false,
-  "gitSyncId": "638dd7c62913ba43778b9145_638e19ca2913ba43778b9a46"
+    "variables": []
+  }
 }
